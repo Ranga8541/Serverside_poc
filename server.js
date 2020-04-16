@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const mongoDB = 'mongodb://127.0.0.1/my_database';
+const mongoDB = 'mongodb://127.0.0.1/disney';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 
 //Get the default connection

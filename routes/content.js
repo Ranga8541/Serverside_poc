@@ -12,12 +12,23 @@ router.route('/add').post((req, res)=>{
     const description=req.body.description;
     const duration= Number(req.body.duration);
     const date= Date.parse(req.body.date);
+    const cast= req.body.cast;
+    const producedBy= req.body.producedBy;
+    const director= req.body.director;
+    const music= req.body.music;
+    const language= req.body.language;
 
     const newContent = new Content(
         { title,
         description,
         duration,
-        date
+        date,
+        cast,
+        producedBy,
+        director,
+        music,
+        language
+
     });
     newContent.save()
  .then(()=> res.json('Content added!'))
@@ -44,6 +55,11 @@ router.route('/update/:id').post((req, res)=>{
         contents.description= req.body.description;
         contents.duration= Number(req.body.duration);
         contents.date= Date.parse(req.body.date);
+        contents.cast= req.body.cast;
+        contents.producedBy= req.body.producedBy;
+        contents.director= req.body.director;
+        contents.music= req.body.music;
+        contents.language= req.body.language;
 
     contents.save()
     .then(()=> res.json('Content updated!'))
