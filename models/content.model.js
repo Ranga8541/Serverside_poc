@@ -5,11 +5,11 @@ const contentSchema = new Schema({
     description: {type: String, required: true}, 
     duration: {type: Number, required:true},
     date:{type:Date, required:true},
-    cast:{type: String, required: true},
-    producedBy:{type: String, required: true},
-    director:{type: String, required: true},
-    music:{type: String, required: true},
-    language:{type: String, required: true}
+    cast:{type: String},
+    producedBy:{type: String},
+    director:{type: String},
+    music:{type: String},
+    language:{type: String}
 },{
 timestamps: true,
 });
